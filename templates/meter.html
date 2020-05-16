@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Prediction of {{id}} stock's movement</h1>
+
+<p><label for="sentiment">Sentiment Score:</label>
+<meter id="sentiment" min="0" low="5" high="7" max="10" value="{{sum_of_sentiment}}"></meter></p>
+{%if sum_of_sentiment < 5 %}
+    <h2 style="color:red">The stock is likely to go down</h1>
+{%else%}
+    <h2 style="color:green">The stock is likely to go up</h1>
+{% endif %}
+</body>
+</html>
